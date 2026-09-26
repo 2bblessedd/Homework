@@ -4,35 +4,96 @@
   <style>
     body { background: #000; margin: 20px; }
     
-    .flex-grid {
+    div {
       display: flex;
-      flex-wrap: wrap;
+    }
+    
+    .horizontal {
+      flex-direction: row;
       gap: 8px;
-      max-width: 800px;
-      margin: 0 auto;
+    }
+
+    .vertical {
+      flex-direction: column;
+      gap: 8px;
     }
     
     .b {
       background: #fff;
       border-radius: 12px;
-      box-sizing: border-box;
+      height: 150px;
+      width: 350px;
     }
   </style>
 </head>
 <body>
 
-  <div class="flex-grid">
-    <div class="b" style="flex: 0 0 calc(25% - 6px); height: 200px;"></div>
-    <div class="b" style="flex: 0 0 calc(25% - 6px); height: 120px;"></div>
-    <div class="b" style="flex: 0 0 calc(25% - 6px); height: 120px;"></div>
-    <div class="b" style="flex: 0 0 calc(25% - 6px); height: 200px;"></div>
+  <div class="horizontal">
     
-    <div class="b" style="flex: 0 0 calc(25% - 6px); height: 90px;"></div>
-    <div class="b" style="flex: 0 0 calc(50% - 4px); height: 170px;"></div>
+    <div class="vertical">
+      
+      <div class="horizontal">
+        
+        <div class="vertical">
+          
+          <div class="b" style="height: 100%">
+            <p>1</p>
+          </div>
+          
+          <div class="b">
+            <p>2</p>
+          </div>
+
+        </div>
+        
+        <div class="vertical">
+          
+          <div class="horizontal">
+            
+            <div class="b">
+              <p>3</p>
+            </div>
+            
+            <div class="b">
+              <p>4</p>
+            </div>
+          
+          </div>
+          
+          <div class="b" style="width: 100%">
+            <p>5</p>
+          </div>
+        
+        </div>
+      
+      </div>
+      
+      <div class="horizontal">
+        
+        <div class="b" style="width: 100%">
+          <p>6</p>
+        </div>
+        
+        <div class="b">
+          <p>7</p>
+        </div>
+      
+      </div>
     
-    <div class="b" style="flex: 0 0 calc(45% - 5px); height: 110px;"></div>
-    <div class="b" style="flex: 0 0 calc(30% - 6px); height: 110px;"></div>
-    <div class="b" style="flex: 0 0 calc(25% - 6px); height: 170px;"></div>
+    </div>
+    
+    <div class="vertical">
+      
+      <div class="b" style="height: 100%">
+        <p>8</p>
+      </div>
+      
+      <div class="b" style="height: 100%">
+        <p>9</p>
+      </div>
+    
+    </div>
+  
   </div>
 
 </body>
