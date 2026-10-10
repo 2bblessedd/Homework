@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a J*b</title>
+    <style>
+
+        body {
+            font-family: sans-serif;
+            color: #2c2d30;
+            background-color: #f4f5f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 20px;
+            margin: 0 auto; 
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            gap: 10px 15px;
+            flex-wrap: wrap;
+        }
+
+        .flex-row-hat {
+            display: flex;
+            flex-direction: row;
+            gap: 350px;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .header {
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: #2c2d30;
+            margin: 0 15px;
+            text-decoration: none; 
+        }
+
+        .button-blue {
+            background-color: #2563eb;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .promo-banner {
+            background-color: #1f2937;
+            color: #fff;
+            border-radius: 5px;
+            padding: 60px 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .promo-banner2 {
+            background-color: #1f2937;
+            color: #fff;
+            border-radius: 8px;
+            padding: 60px 10px;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 25px;
+        }
+
+        .promo-banner h1 {
+            margin-top: 6px;
+            font-size: 36px;
+        }
+
+        .button-dark {
+            background-color: #202124;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+        }
+
+        .main-content {
+            align-items: flex-start; 
+        }
+
+        .sidebar {
+            width: 260px;
+            flex-shrink: 0; 
+            background-color: transparent;
+            margin-right: 30px;
+        }
+
+        .filter-block {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .filter-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .filter-item {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .search-box {
+            background: #fff;
+            padding: 11px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .cards-grid {
+            flex: 1; 
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            width: calc(33.333% - 20px); 
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .card-company {
+            font-size: 12px;
+            color: #4b5563;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-geo {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-bottom: 20px;
+        }
+
+        .card-info {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .badge {
+            transform: skew(10deg);
+            transform: rotate(15deg);
+            position: absolute;
+            top: -10px;
+            right: 5px;
+            background-color: #2563eb;
+            color: #fff;
+            font-size: 12px;
+            padding: 7px 11px;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+
+    <div class="header flex-row-hat">
+        <div class="logo">mattee</div>
+        <div class="nav-links">
+            <a href="#">Вакансии</a>
+            <a href="#">Работодателям</a>
+        </div>
+        <button class="button-blue">Опубликовать</button>
+    </div>
+
+    <div class="promo-banner">
+        <h1>Больше вакансий <br>в telegram-канале</br></h1>
+        <a href="#" class="button-dark">Перейти в ТГ канал</a>
+    </div>
+
+    <div class="main-content flex-row">
+        
+        <div class="sidebar flex-column">
+
+            <div class="filter-block">
+                <input type="text" class="search-box" placeholder="Поиск">
+                <div class="filter-title">Формат</div>
+
+                <div class="flex-row">
+                    <div class="filter-item">Парт-тайм</div>
+                    <div class="filter-item">Фулл-тайм</div>
+                    <div class="filter-item">Стажировка</div>
+                </div>
+
+                <div class="flex-row">
+                    <div class="filter-title">Локация</div>
+                    <div class="filter-item">Москва</div>
+                    <div class="filter-item">Санкт-Петербург</div>
+                    <div class="filter-item">Казань</div>   
+                </div>              
+            </div>
+        </div>
+
+       
+        <div class="cards-grid">
+             
+            <div class="card">
+                <div class = "flex-column">
+                    <div class="badge">новая</div>
+                    <div class="card-company">Т-Банк</div>
+                    <div class="card-title">Художник концепт-арта</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">280 000₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="card">
+                <div class = "flex-column">
+                    <div class="badge">новая</div>
+                    <div class="card-company">НИУ ВШЭ</div>
+                    <div class="card-title">Мясник</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">75 000₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class = "flex-column">
+                    <div class="card-company">Додо Пицца</div>
+                    <div class="card-title">Охранник</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">28 000₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class = "flex-column">
+                    <div class="card-company">Металлургический завод</div>
+                    <div class="card-title">Графический дизайнер</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">222 000₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class = "flex-column">
+                    <div class="badge">новая</div>
+                    <div class="card-company">Сбербанк</div>
+                    <div class="card-title">Повар-кондитер</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">130 000₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="card">
+                <div class = "flex-column">
+                    <div class="card-company">Мегафон</div>
+                    <div class="card-title">Водитель категории D</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">3 000₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="card">
+                <div class = "flex-column">
+                    <div class="card-company">Роскомнадзор</div>
+                    <div class="card-title">Клоун-аниматор</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">15₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="card">
+                <div class = "flex-column">
+                    <div class="card-company">Т-Банка</div>
+                    <div class="card-title">Сортировщик огурцов по банкам</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">999 999₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="card">
+                <div class = "flex-column">
+                    <div class="card-company">Детский Мир</div>
+                    <div class="card-title">Снайпер</div>
+                    <div class="card-geo">📍 Москва, формат работы</div>
+                    <div class = "flex-row">
+                        <div class="card-info">1 200 000₽</div>
+                        <div class="card-info">Фулл-тайм</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="promo-banner2">
+    <p>Подвальный</p>
+    <p>Подвал</p>
+    <p>Подвалович</p>
+    <h1>Basement</h1>
+
+</div>
+
+</body>
+</html>
